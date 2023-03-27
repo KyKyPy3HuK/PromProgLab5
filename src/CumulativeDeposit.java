@@ -1,5 +1,11 @@
 public class CumulativeDeposit extends SuperDeposit implements Deposit{
     String type = CUMULATIVE_DEPOSIT;
+    public CumulativeDeposit(double sum, double monthlyPercent, int term, CurrencyV currency){
+        this.sum = sum;
+        this.monthlyPercent = monthlyPercent;
+        this.termInDays = term;
+        this.currency = currency;
+    }
     @Override
     public String getDepositType() {
         return this.type;
@@ -13,5 +19,12 @@ public class CumulativeDeposit extends SuperDeposit implements Deposit{
             return targetSum;
         }
         return -1;
+    }
+
+    @Override
+    public String toString() {
+        return "CumulativeDeposit{" +
+                "type='" + type + '\'' +
+                "} " + super.toString();
     }
 }

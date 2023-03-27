@@ -1,6 +1,6 @@
-public class Currency {
+public class CurrencyV {
     private double currencyCoef;
-    protected Currency(double currencyCoef){
+    protected CurrencyV(double currencyCoef){
         this.currencyCoef = currencyCoef;
     }
     double getCurrencyCoef(){
@@ -8,5 +8,12 @@ public class Currency {
     }
     void setCurrencyCoef(double currencyCoef){
         this.currencyCoef = currencyCoef;
+    }
+
+    @Override
+    public String toString() {
+        return "CurrencyV{" +
+                "currencyCoef=" + currencyCoef +
+                '}';
     }
 }

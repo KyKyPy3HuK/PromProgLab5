@@ -4,10 +4,10 @@ public interface Deposit {
     double getDepositSum();
     String getDepositType();
     double getMonthlyPercent();
-    Currency getCurrency();
+    CurrencyV getCurrency();
     int getTermInDays();
     void setTermInDays(int termInDays);
     void setMonthlyPercent(double monthlyPercent);
-    void changeCurrency(Currency currency);
+    void changeCurrency(CurrencyV currency);
     double calculateAccruals();
 }
